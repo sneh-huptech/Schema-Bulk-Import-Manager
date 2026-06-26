@@ -1,0 +1,1047 @@
+/**
+ * Schema Bulk Import Manager — Admin Styles
+ * Version: 1.0.0
+ */
+
+/* ============================================================
+   Reset / Base
+   ============================================================ */
+.sbim-wrap {
+    max-width: 1400px;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
+}
+
+/* ============================================================
+   Generate Code Page
+   ============================================================ */
+.sbim-code-wrap {
+    position: relative;
+    background: #0f172a;
+}
+
+.sbim-code-textarea {
+    width: 100%;
+    min-height: 500px;
+    background: #0f172a !important;
+    color: #e2e8f0;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 20px;
+    border: none;
+    resize: vertical;
+    outline: none;
+    display: block;
+}
+
+.sbim-wrap * {
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+.sbim-header {
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0 0 20px 0;
+    margin-bottom: 24px;
+}
+
+.sbim-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.sbim-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sbim-header__brand h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.2;
+}
+
+.sbim-header__brand .dashicons {
+    font-size: 26px;
+    width: 26px;
+    height: 26px;
+    color: #3b82f6;
+}
+
+.sbim-header__actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.sbim-header__actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sbim-header__actions .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+}
+
+.sbim-count-badge {
+    background: #3b82f6;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+.sbim-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
+}
+
+.sbim-card__header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.sbim-card__header h2,
+.sbim-card__header h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.sbim-card__header--flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.sbim-card__body {
+    padding: 20px;
+}
+
+.sbim-card__body--flush {
+    padding: 0;
+}
+
+.sbim-card--danger .sbim-card__header {
+    background: #fff5f5;
+    border-bottom-color: #fecaca;
+}
+
+.sbim-card--danger .sbim-card__header h3 {
+    color: #dc2626;
+}
+
+.sbim-card--report {
+    border-color: #6ee7b7;
+}
+
+.sbim-card--report .sbim-card__header {
+    background: #ecfdf5;
+}
+
+/* ============================================================
+   Stats Grid
+   ============================================================ */
+.sbim-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.sbim-stat-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
+    transition: box-shadow .2s;
+}
+
+.sbim-stat-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+
+.sbim-stat-card__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sbim-stat-card__icon .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.sbim-stat-card--total .sbim-stat-card__icon {
+    background: #eff6ff;
+}
+
+.sbim-stat-card--total .sbim-stat-card__icon .dashicons {
+    color: #3b82f6;
+}
+
+.sbim-stat-card--active .sbim-stat-card__icon {
+    background: #f0fdf4;
+}
+
+.sbim-stat-card--active .sbim-stat-card__icon .dashicons {
+    color: #16a34a;
+}
+
+.sbim-stat-card--inactive .sbim-stat-card__icon {
+    background: #fff5f5;
+}
+
+.sbim-stat-card--inactive .sbim-stat-card__icon .dashicons {
+    color: #dc2626;
+}
+
+.sbim-stat-card--warning .sbim-stat-card__icon {
+    background: #fffbeb;
+}
+
+.sbim-stat-card--warning .sbim-stat-card__icon .dashicons {
+    color: #d97706;
+}
+
+.sbim-stat-card__value {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    color: #1e293b;
+}
+
+.sbim-stat-card__label {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* ============================================================
+   Notices
+   ============================================================ */
+.sbim-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.sbim-notice .dashicons {
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.sbim-notice--success {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+}
+
+.sbim-notice--success .dashicons {
+    color: #16a34a;
+}
+
+.sbim-notice--error {
+    background: #fff5f5;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.sbim-notice--error .dashicons {
+    color: #dc2626;
+}
+
+.sbim-notice--warning {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    color: #92400e;
+}
+
+.sbim-notice--warning .dashicons {
+    color: #d97706;
+}
+
+.sbim-notice--info {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1e40af;
+}
+
+.sbim-notice--info .dashicons {
+    color: #3b82f6;
+}
+
+/* ============================================================
+   Upload Zone
+   ============================================================ */
+.sbim-upload-zone {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 48px 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s;
+    background: #fafafa;
+    position: relative;
+}
+
+.sbim-upload-zone:hover,
+.sbim-upload-zone.sbim-dragover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.sbim-upload-zone__icon .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #94a3b8;
+    display: block;
+    margin: 0 auto 16px;
+}
+
+.sbim-upload-zone:hover .sbim-upload-zone__icon .dashicons,
+.sbim-upload-zone.sbim-dragover .sbim-upload-zone__icon .dashicons {
+    color: #3b82f6;
+}
+
+.sbim-upload-zone__primary {
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 6px;
+}
+
+.sbim-upload-zone__secondary {
+    font-size: 13px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.sbim-upload-zone__input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.sbim-upload-zone__filename {
+    margin-top: 16px;
+    padding: 8px 16px;
+    background: #e0f2fe;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0369a1;
+    display: inline-block;
+}
+
+.sbim-upload-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sbim-upload-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 24px;
+    height: auto;
+    font-size: 14px;
+}
+
+.sbim-upload-actions .button .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+/* ============================================================
+   Progress Bar
+   ============================================================ */
+.sbim-progress {
+    margin-top: 20px;
+}
+
+.sbim-progress__bar {
+    background: #e2e8f0;
+    border-radius: 99px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.sbim-progress__fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #6366f1);
+    border-radius: 99px;
+    width: 0%;
+    transition: width .4s ease;
+    animation: sbim-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes sbim-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .7;
+    }
+}
+
+.sbim-progress__text {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 8px;
+}
+
+/* ============================================================
+   Tables
+   ============================================================ */
+.sbim-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sbim-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.sbim-table thead th {
+    background: #f8fafc;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: #64748b;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.sbim-table tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #374151;
+    vertical-align: middle;
+}
+
+.sbim-table--striped tbody tr:nth-child(even) td {
+    background: #fafafa;
+}
+
+.sbim-table tbody tr:hover td {
+    background: #f0f9ff;
+}
+
+.sbim-table tbody tr.sbim-row--error td {
+    background: #fff5f5 !important;
+}
+
+.sbim-table tbody tr.sbim-row--warning td {
+    background: #fffbeb !important;
+}
+
+.sbim-table__url-cell {
+    max-width: 350px;
+}
+
+.sbim-url-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #3b82f6;
+    word-break: break-all;
+}
+
+.sbim-url-link:hover {
+    text-decoration: underline;
+}
+
+.sbim-ext-icon {
+    font-size: 14px !important;
+    width: 14px !important;
+    height: 14px !important;
+    flex-shrink: 0;
+    color: #94a3b8;
+}
+
+.sbim-table__actions {
+    white-space: nowrap;
+}
+
+.sbim-table__actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 4px;
+}
+
+.sbim-table__actions .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* ============================================================
+   Badges
+   ============================================================ */
+.sbim-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+}
+
+.sbim-badge--success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.sbim-badge--danger {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.sbim-badge--warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.sbim-badge--info {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.sbim-badge--neutral {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+/* ============================================================
+   Filters / Search
+   ============================================================ */
+.sbim-filters {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.sbim-search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.sbim-search-input {
+    min-width: 240px;
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.sbim-select {
+    height: 34px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    padding: 0 8px;
+}
+
+/* ============================================================
+   Bulk Actions
+   ============================================================ */
+.sbim-bulk-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sbim-bulk-actions .button-link-delete {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+}
+
+.sbim-bulk-actions .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* ============================================================
+   Pagination
+   ============================================================ */
+.sbim-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-top: 1px solid #e2e8f0;
+    background: #f8fafc;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.sbim-pagination__info {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.sbim-pagination__links {
+    display: flex;
+    gap: 4px;
+}
+
+/* ============================================================
+   Empty State
+   ============================================================ */
+.sbim-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.sbim-empty-state .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #cbd5e1;
+    display: block;
+    margin: 0 auto 16px;
+}
+
+.sbim-empty-state h3 {
+    font-size: 16px;
+    color: #64748b;
+    margin: 0 0 8px;
+}
+
+.sbim-empty-state p {
+    font-size: 14px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+/* ============================================================
+   Quick Actions
+   ============================================================ */
+.sbim-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.sbim-quick-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all .2s;
+    text-align: center;
+}
+
+.sbim-quick-action:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+.sbim-quick-action .dashicons {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: #3b82f6;
+}
+
+/* ============================================================
+   How-To Steps
+   ============================================================ */
+.sbim-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.sbim-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sbim-step:last-child {
+    border-bottom: none;
+}
+
+.sbim-step__number {
+    width: 30px;
+    height: 30px;
+    background: #3b82f6;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.sbim-step__icon {
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.sbim-step__icon .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: #6366f1;
+}
+
+.sbim-step__content strong {
+    display: block;
+    font-size: 14px;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.sbim-step__content p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   Edit Page Layout
+   ============================================================ */
+.sbim-edit-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .sbim-edit-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   Form Fields
+   ============================================================ */
+.sbim-field {
+    margin-bottom: 20px;
+}
+
+.sbim-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.sbim-required {
+    color: #dc2626;
+    margin-left: 3px;
+}
+
+.sbim-input {
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.sbim-input--full {
+    width: 100%;
+}
+
+.sbim-input:focus,
+.sbim-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
+}
+
+.sbim-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    resize: vertical;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.sbim-textarea--code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    background: #0f172a;
+    color: #e2e8f0;
+    border-color: #334155;
+}
+
+.sbim-textarea--code:focus {
+    border-color: #3b82f6;
+}
+
+.sbim-field__hint {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 6px 0 0;
+}
+
+.sbim-form-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.sbim-form-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: auto;
+    padding: 8px 20px;
+}
+
+/* ============================================================
+   Meta List (Edit sidebar)
+   ============================================================ */
+.sbim-meta-list {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 8px 12px;
+    font-size: 13px;
+    margin: 0 0 16px;
+}
+
+.sbim-meta-list dt {
+    font-weight: 600;
+    color: #64748b;
+    align-self: center;
+}
+
+.sbim-meta-list dd {
+    margin: 0;
+    color: #1e293b;
+    word-break: break-all;
+}
+
+.sbim-btn-full {
+    width: 100%;
+    justify-content: center;
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ============================================================
+   Preview specific
+   ============================================================ */
+.sbim-preview-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.sbim-preview-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sbim-schema-preview {
+    max-width: 260px;
+    font-family: monospace;
+    font-size: 11px;
+    background: #f1f5f9;
+    border-radius: 4px;
+    padding: 4px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    color: #475569;
+}
+
+.sbim-duplicate-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sbim-duplicate-actions label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* ============================================================
+   Report Section
+   ============================================================ */
+.sbim-report-rows {
+    margin-top: 16px;
+}
+
+.sbim-report-rows table {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+.sbim-report-rows th,
+.sbim-report-rows td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.sbim-report-rows th {
+    background: #f8fafc;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+/* ============================================================
+   Misc
+   ============================================================ */
+.sbim-muted {
+    color: #9ca3af;
+}
+
+.sbim-date {
+    font-size: 12px;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.sbim-delete-link,
+.sbim-delete-confirm {
+    cursor: pointer;
+}
+
+/* Spinner inside buttons */
+.sbim-spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: sbim-spin .6s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes sbim-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .sbim-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sbim-quick-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sbim-card__header--flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .sbim-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
