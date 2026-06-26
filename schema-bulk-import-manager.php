@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name:       Schema Bulk Import Manager
- * Plugin URI:        https://snehgohil-portfolio.netlify.app/
+ * Plugin URI:        https://github.com/sneh-huptech/Schema-Bulk-Import-Manager
  * Description:       Bulk import JSON-LD schema markup via CSV. Automatically injects schemas into matching pages with zero modification.
  * Version:           1.0.0
  * Requires at least: 5.8
  * Requires PHP:      7.4
- * Author:            Your Name
+ * Author:            Sneh Gohil
  * Author URI:        https://snehgohil-portfolio.netlify.app/
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
